@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right,rgb(252, 252, 255),rgb(6, 6, 81));
+    
+}
+
+
+
+header {
+    background-image:linear-gradient(to left,rgb(247, 244, 244),rgb(2, 6, 56)); ;
+    color: white;
+    padding: 1px 1px 0px 1px;
+    text-align: center;
+    animation: shadowPop 0.8s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+@keyframes shadowPop{
+    to{
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+}
+
+header:hover {
+    background-image:linear-gradient(to left,rgb(21, 12, 90),rgb(245, 245, 246)); ;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: gap 0.3s ease;
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    color: #090707;
+    
+}
+
+.github-button {
+    
+    background-color: rgb(241, 240, 247);
+    color: rgb(16, 7, 7);
+    padding: 10px 11px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    border: 3px solid rgb(52, 17, 190);
+    position: relative;
+    left: 300px;
+    bottom: 7px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #a3b0df;
+    transform: scale(1.1);
+}
+.github-button span{
+    font-weight: bolder;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.project {
+    
+    border: 7px solid rgb(2, 2, 65);
+    padding: 10px;
+    margin: 10px 0;
+    
+    transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #c8c8f3;
+}
+
+.contact{
+    display: flex;
+    justify-content:space-around;
+}
+.span{
+    background-color: #1f08ec;
+    border-radius: 20px;
+    padding: 7px;
+    color: white;
+    border: 2px solid rgb(138, 115, 250);
+}
+#Home a{
+    color: #0a0909;
+    font-size: 40px;
+    
+}
+#Home a i{
+    transition: transform 0.3s ease;
+}
+#Home a i:hover{
+    transform: rotateY(40deg);
+    
+}
+
+#projects a{
+    color: #f8f4f4;
+    font-size: 45px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#Home h1{
+   font-size: 37px;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #f7efef;
+    border-radius: 3px;
+    border: 3px solid rgb(7, 7, 209);
+    color: rgb(9, 8, 8);
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #8271f3;
+}
+
+footer {
+    
+    animation: shadowPop 0.8s ease-in forwards;
+    transform: scale(0.8);
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+    background-image:linear-gradient(to left,rgb(247, 244, 244),rgb(2, 6, 56))
+}
+
+footer:hover {
+    background-color: #045e37;
+    background-image:linear-gradient(to left,rgb(21, 12, 90),rgb(245, 245, 246)); ;
+}
+
+
+@media only screen and(min-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex-basis: 100%;
+    }
+  
+}
+@media only screen and(max-width: 480px) {
+    header, footer {
+        padding:10px;
+    }
+   
+
+}
+#Home.animation{
+    animation: slideleft 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+#about.animation{
+    animation: slidefadedown 3s ease-out forwards;
+}
+#projects{
+    animation: rotate 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+#skill.animation{
+    animation: fadecolor 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+#contact.animation{
+    animation: slideleft 3s ease-in-out forwards;
+}
+@keyframes rotate {
+    0%{
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+@keyframes fadecolor {
+    0%{
+        opacity: 0;
+        background-color: #1f08ec;
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+@keyframes slidefadedown {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
