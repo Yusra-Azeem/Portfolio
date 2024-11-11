@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: linear-gradient(to right,rgb(252, 252, 255),rgb(6, 6, 81));
-    
+    background-size:cover;
 }
 
 
