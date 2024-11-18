@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Portfolio</title>
-    <script src ="scripts.js" defer></script>
+    <script src ="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -12,16 +12,20 @@
 </head>
 
 <body>
-    <header >
+    <div>
+    <header>
+        <span class="tag">&lt;</span>
+        <span class="name">Yusra Azeem</span>
+        <span class="tag">/&gt;</span>
         <nav>
             <ul class="heading">
+               
                 <li><a href="#Home">Home</a></li>
-                <li><a href="#about">About Me</a></li>              
+                <li><a href="#about">About</a></li>              
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/Yusra-Azeem" target="_blank" class="github-button">
-                    <span>Github</span>
+                
                 </a></li>
             </ul>
         </nav>
@@ -62,7 +66,7 @@
                 <li>Easy Editing: Update passwords effortlessly.</li>
                 <li>Organized Storage: Each password has a unique ID for quick access.</li>
                <ul> </div>
-                <div>
+                <div class="spanwrap">
             <span class ="span">React</span>
             <span class ="span">Tailwindcss</span>
             <span class ="span">Nodejs</span>
@@ -76,7 +80,8 @@
             <h3>Password Manager MAX</h3>
             <a class="icon" href="https://github.com/Yusra-Azeem/Password-Manager"><i class='bx bxl-github'></i></a>
             </div>
-        </div>
+            
+        <div class="spanwrap">
         
             <p></p>
             <span class ="span">React</span>
@@ -96,6 +101,7 @@
     <div class="project">
         <h3>Full Stack Web Development</h3>
         <p>I enjoy the process of building and design websites</p>
+        <div class="spanwrap">
         <span class ="span">React</span>
             <span class ="span">Tailwindcss</span>
             <span class ="span">Nodejs</span>
@@ -106,43 +112,34 @@
             <span class ="span">Html</span>
             <span class ="span">Css</span>
             <span class ="span">JavaScript</span>
-
+</div>
     </div>
     <div class="project">
         <h3>Problem Solving</h3>
         <p>I love to code and tackle problem</p>
-        
+        <div class="spanwrap">
             <span class ="span">Java(core & advance)</span>
             <span class ="span">C</span>
-            
+            </div>
     </div>
 
 </section>
 
     <section id="contact" class="animation">
-        <h2>Contact Me</h2>
+        <h2 class="contact">Contact Me</h2>
         <div class="contact">
         <div class="mail">
             <h3>Email: yuzhere55@gmail.com</h3>
             <h3>Phone number: 7376767532</h3>
-        </div>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter name" name="name" autocomplete="on">
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter Email" name="email" autocomplete="on">
-            <label for="message">Message:</label>
-            <textarea id="message" placeholder="Enter Message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-        </div>
-    </section>
-
-    <footer class="animation">
         
-       <p> &copy; 2024 Yusra-Azeem. All rights reserved.</p>
+    </section>
+    <footer id="footer" class="animation">
+        <a href="https://github.com/Yusra-Azeem"><i class='bx bxl-github'></i></a>
+        <a href="https://linkedin.com/Yusra Azeem"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://instagram.com/Yusra Azeem"><i class='bx bxl-instagram'></i></a>
     </footer>
-
+   
+</div>
     
 </body>
 </html>

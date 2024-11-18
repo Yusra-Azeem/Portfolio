@@ -3,52 +3,55 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(to right,rgb(252, 252, 255),rgb(6, 6, 81));
-    
+    background-image: linear-gradient(to right, rgb(252, 252, 255),rgb(6, 6, 81));
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
+
 
 
 
 header {
-    background-image:linear-gradient(to left,rgb(247, 244, 244),rgb(2, 6, 56)); ;
-    color: white;
-    padding: 1px 1px 0px 1px;
-    text-align: center;
-    animation: shadowPop 0.8s ease-out forwards;
+    
+    
+    animation: slidefadedown 0.8s ease-out forwards;
     opacity: 0;
-    transform: scale(0.8);
-}
-@keyframes shadowPop{
-    to{
-        opacity: 1;
-        transform: scale(1);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
+   padding: 5px 5px;
+   box-sizing: border-box;
+  
 }
 
-header:hover {
-    background-image:linear-gradient(to left,rgb(21, 12, 90),rgb(245, 245, 246)); ;
-
-}
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    list-style: none;
+    display: flex;
     gap: 15px;
     transition: gap 0.3s ease;
 }
 
-nav ul li {
-    display: inline;
-    
+nav ul li{
+    white-space: none;
+}
+.tag{
+    color: #11086d;
+    font-size: 25px;
+    font-weight: bold;
+}
+.name{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(247, 247, 249);
     text-decoration: none;
-    
+    font-size: 21px;;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -88,7 +91,7 @@ section {
     
     border: 7px solid rgb(2, 2, 65);
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
     
     transition: transform 0.3s ease, background-color 0.3s ease-in-out;
 }
@@ -102,10 +105,18 @@ section {
     display: flex;
     justify-content:space-around;
 }
+.spanwrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 .span{
+    text-align: center;
     background-color: #1f08ec;
     border-radius: 20px;
     padding: 7px;
+    min-width: 80px;
+    box-sizing: border-box;
     color: white;
     border: 2px solid rgb(138, 115, 250);
 }
@@ -114,14 +125,17 @@ section {
     font-size: 40px;
     
 }
-#Home a i{
-    transition: transform 0.3s ease;
-}
-#Home a i:hover{
-    transform: rotateY(40deg);
+
+footer a{
+    color: #0a0909;
+    font-size: 40px;
     
 }
-
+footer{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+}
 #projects a{
     color: #f8f4f4;
     font-size: 45px;
@@ -136,71 +150,37 @@ section {
 #Home h1{
    font-size: 37px;
 }
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #f7efef;
-    border-radius: 3px;
-    border: 3px solid rgb(7, 7, 209);
-    color: rgb(9, 8, 8);
-    font-weight: bolder;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #8271f3;
-}
-
-footer {
-    
-    animation: shadowPop 0.8s ease-in forwards;
-    transform: scale(0.8);
-    padding-bottom: 2px;
-    padding-top: 2px;
-    text-align: center;
-    position:relative;
-    width: 100%;
-    bottom: 0;
-    background-image:linear-gradient(to left,rgb(247, 244, 244),rgb(2, 6, 56))
-}
-
-footer:hover {
-    background-color: #045e37;
-    background-image:linear-gradient(to left,rgb(21, 12, 90),rgb(245, 245, 246)); ;
-}
 
 
-@media only screen and(min-width: 480px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 1056px) {
+    .span{
+        flex: 1 1 calc(45%-10px);
+    }
+   header{
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+   
+   }
+    nav ul{
+      
+        gap: 15px;
+    }
+    section{
+        width: 100%;
+        
     }
 
-    .project {
-        flex-basis: 100%;
-    }
-  
-}
-@media only screen and(max-width: 480px) {
-    header, footer {
-        padding:10px;
+    .contact form{
+        margin: 10px;
     }
    
-
+    
+  
+   
+}
+#footer.animation{
+    animation: slideleft 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 #Home.animation{
     animation: slideleft 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
