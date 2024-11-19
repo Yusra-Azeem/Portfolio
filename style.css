@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    max-width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +27,7 @@ header {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -48,14 +51,14 @@ nav ul li{
 }
 
 nav ul li a {
-    color: rgb(247, 247, 249);
+    color: rgb(9, 9, 9);
     text-decoration: none;
     font-size: 21px;;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #090707;
+    color: #faf9f9;
     
 }
 
